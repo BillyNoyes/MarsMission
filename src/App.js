@@ -3,6 +3,7 @@ import './App.css';
 import Input from './components/Input';
 import Task from './components/Task';
 import Sidebar from './components/Sidebar';
+import Image from './components/Image';
 import { useSelector } from 'react-redux';
 import { selectTaskList } from './features/taskSlice';
 
@@ -15,7 +16,7 @@ function App() {
       <div className="app__main">
         <Sidebar taskList={taskList} />
         <div className='app__mainContent'>
-          {/* Image */}
+          <Image />
           {taskList.map(item => (
             <Task key={item.id} title={item.title} description={item.description} creator={item.creator} worker={item.worker} done={item.done} id={item.id} />
           ))}
