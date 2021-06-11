@@ -1,7 +1,7 @@
 # Mars Mission
-git clone https://github.com/BillyNoyes/weekly-view.git
+git clone https://github.com/BillyNoyes/MarsMission.git
 
-cd weekly-view
+cd MarsMission
 
 npm install
 
