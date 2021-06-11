@@ -12,11 +12,22 @@ function App() {
   const taskList = useSelector(selectTaskList);
   const [username, setUsername] = useState("");
 
+  const handleUsername = () => {
+    const currentName = prompt("Please enter your name");
+    console.log(currentName);
+    if (currentName === '') {
+      handleUsername();
+    } else {
+      setUsername(currentName);
+    }
+  }
+
   useEffect(() => {
-    setUsername(prompt("Please enter your name"));
+    handleUsername();
   }, []);
 
   return (
+ 
     <div className="app">
       <Header />
       <div className="app__main">
