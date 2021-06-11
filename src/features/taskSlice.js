@@ -19,7 +19,8 @@ const taskSlice = createSlice({
             })
         },
         deleteTask: (state, action) => {
-            state.taskList.filter(item => item.id !== action.id);
+            const index = state.taskList.indexOf(action.payload);
+            state.taskList.splice(index, 1);
         },
         deleteAll: (state, action) => {
             while (state.taskList.length) {

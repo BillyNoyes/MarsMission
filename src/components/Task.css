@@ -17,10 +17,6 @@
     /* padding-right: 20px; */
 }
 
-.task:first-child {
-    /* padding-left: 20px; */
-}
-
 .task--done {
     text-decoration: line-through;
 }

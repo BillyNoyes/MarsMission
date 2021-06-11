@@ -25,8 +25,7 @@ function Task({ title, description, creator, worker, done, id}) {
             <button className="task__delete" onClick={() => {
                 if (window.confirm("Delete this task?")) {
                     handleDelete();
-                }}} 
-            className='task__delete'>🗑</button>
+                }}} className='task__delete'>🗑</button>
         </div>
     )
 }
