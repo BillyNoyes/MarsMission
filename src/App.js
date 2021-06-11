@@ -13,7 +13,7 @@ function App() {
     <div className="app">
       {/* Header */}
       <div className="app__main">
-        <Sidebar />
+        <Sidebar taskList={taskList} />
         <div className='app__mainContent'>
           {/* Image */}
           {taskList.map(item => (
