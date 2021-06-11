@@ -3,7 +3,7 @@ import './Sidebar.css';
 import { useDispatch } from 'react-redux';
 import { deleteAll } from '../features/taskSlice';
 
-function Sidebar({ taskList }) {
+function Sidebar({ taskList, username }) {
     const dispatch = useDispatch();
     
     // Deletes all the objects within the tasks array
@@ -13,7 +13,7 @@ function Sidebar({ taskList }) {
 
     return (
         <div className="sidebar">
-            <p>Current Use</p>
+            <p>Hey {username}</p>
             <p>{taskList.length} {taskList.length === 1 ? 'Task' : "Tasks"}</p>
             {/* Onclick of the button prompts the user to ensure they actually want to delete all tasks */}
             <button onClick={() => {

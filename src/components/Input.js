@@ -3,10 +3,9 @@ import './Input.css';
 import { useDispatch } from 'react-redux';
 import { saveTask } from '../features/taskSlice';
 
-function Input() {
+function Input({ username }) {
     const [taskTitle, setTaskTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [taskCreator, setTaskCreator] = useState('');
     const [taskWorker, setTaskWorker] = useState('');
     const [error, setError] = useState('');
     const dispatch = useDispatch();
@@ -14,12 +13,12 @@ function Input() {
 
     const addTask = () => {
         // Checks to make sure no input field is null
-        if (taskTitle !== '' && description !== '' && taskCreator !== '' && taskWorker !== '') {
+        if (taskTitle !== '' && description !== '' && taskWorker !== '') {
             // Passes the data into the saveTask function, as well as creates an id for the task using the current datetime
             dispatch(saveTask({
                 title: taskTitle,
                 description: description,
-                creator: taskCreator,
+                creator: username,
                 worker: taskWorker,
                 done: false,
                 id: Date.now()
@@ -28,7 +27,6 @@ function Input() {
             setError('');
             setTaskTitle('');
             setDescription('');
-            setTaskCreator('');
             setTaskWorker('');
         } else {
             setError('Each input must contain text');
@@ -41,7 +39,6 @@ function Input() {
             <div className='input__form'>
                 <input type="text" placeholder='Task Title' value={taskTitle} onChange={e => setTaskTitle(e.target.value)} />
                 <input type="text" placeholder='Description' value={description} onChange={e => setDescription(e.target.value)} />
-                <input type="text" placeholder='Creator' value={taskCreator} onChange={e => setTaskCreator(e.target.value)} />
                 <input type="text" placeholder='Worker' value={taskWorker} onChange={e => setTaskWorker(e.target.value)} />
                 <button className='input__formButton' onClick={addTask}>Add</button>
             </div>
