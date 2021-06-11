@@ -10,7 +10,13 @@
     margin-left: 30px;
 }
 
-.sidebar > button {
-    width: 70%;
-    padding: 2px;
+button.sidebar__button {
+    margin-right: 8px;
+    padding: 0;
+    background-color: rgb(214, 213, 213);
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
 }

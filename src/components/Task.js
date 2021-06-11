@@ -22,7 +22,7 @@ function Task({ title, description, creator, worker, done, id}) {
             <p className={done && 'task--done'}>{creator}</p>
             <p className={done && 'task--done'}>{worker}</p>
             <input type="checkbox" onChange={handleCheck} value={done} />
-            <button onClick={handleDelete} className='task__delete'>🗑</button>
+            <button className="task__delete" onClick={handleDelete} className='task__delete'>🗑</button>
         </div>
     )
 }

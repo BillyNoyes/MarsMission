@@ -32,7 +32,7 @@ input:focus {
     outline: none;
 }
 
-button {
+.input__formButton {
     margin-right: 8px;
     padding: 10px;
     background-color: rgb(214, 213, 213);
@@ -40,4 +40,5 @@ button {
     border-radius: 10px;
     height: 30px;
     width: 50px;
+    cursor: pointer;
 }

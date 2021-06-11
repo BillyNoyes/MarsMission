@@ -6,7 +6,7 @@ function Sidebar({ taskList }) {
         <div className="sidebar">
             <p>Current Use</p>
             <p>{taskList.length} {taskList.length === 1 ? 'Task' : "Tasks"}</p>
-            <button>Delete All</button>
+            <button className='sidebar__button'>Delete All</button>
         </div>
     )
 }

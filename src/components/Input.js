@@ -39,7 +39,7 @@ function Input() {
                 <input type="text" placeholder='Description' value={description} onChange={e => setDescription(e.target.value)} />
                 <input type="text" placeholder='Creator' value={taskCreator} onChange={e => setTaskCreator(e.target.value)} />
                 <input type="text" placeholder='Worker' value={taskWorker} onChange={e => setTaskWorker(e.target.value)} />
-                <button onClick={addTask}>Add</button>
+                <button className='input__formButton' onClick={addTask}>Add</button>
             </div>
             <p style={{color: "red"}}>{error}</p>
         </div>
