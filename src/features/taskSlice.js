@@ -15,4 +15,5 @@ const taskSlice = createSlice({
 });
 
 export const { saveTask } = taskSlice.actions
+export const selectTaskList = state => state.tasks.taskList
 export default taskSlice.reducer
