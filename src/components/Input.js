@@ -15,7 +15,7 @@ function Input() {
         if (taskTitle !== '' && description !== '' && taskCreator !== '' && taskWorker !== '') {
             dispatch(saveTask({
                 title: taskTitle,
-                desc: description,
+                description: description,
                 creator: taskCreator,
                 worker: taskWorker,
                 done: false,
