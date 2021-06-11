@@ -6,6 +6,7 @@ import { deleteAll } from '../features/taskSlice';
 function Sidebar({ taskList }) {
     const dispatch = useDispatch();
     
+    // Deletes all the objects within the tasks array
     const handleDeleteAll = () => {
         dispatch(deleteAll());
     }
@@ -14,6 +15,7 @@ function Sidebar({ taskList }) {
         <div className="sidebar">
             <p>Current Use</p>
             <p>{taskList.length} {taskList.length === 1 ? 'Task' : "Tasks"}</p>
+            {/* Onclick of the button prompts the user to ensure they actually want to delete all tasks */}
             <button onClick={() => {
                 if (window.confirm("Delete all Tasks?")) {
                     handleDeleteAll();

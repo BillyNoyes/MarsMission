@@ -11,8 +11,11 @@ function Input() {
     const [error, setError] = useState('');
     const dispatch = useDispatch();
 
+
     const addTask = () => {
+        // Checks to make sure no input field is null
         if (taskTitle !== '' && description !== '' && taskCreator !== '' && taskWorker !== '') {
+            // Passes the data into the saveTask function, as well as creates an id for the task using the current datetime
             dispatch(saveTask({
                 title: taskTitle,
                 description: description,
@@ -21,6 +24,7 @@ function Input() {
                 done: false,
                 id: Date.now()
             }))
+            // Resets all state values back to empty string
             setError('');
             setTaskTitle('');
             setDescription('');
@@ -41,6 +45,7 @@ function Input() {
                 <input type="text" placeholder='Worker' value={taskWorker} onChange={e => setTaskWorker(e.target.value)} />
                 <button className='input__formButton' onClick={addTask}>Add</button>
             </div>
+            {/* Error message */}
             <p style={{color: "red"}}>{error}</p>
         </div>
     )

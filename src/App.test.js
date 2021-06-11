@@ -12,7 +12,6 @@ test('Test Template', () => {
   // expect(linkElement).toBeInTheDocument();
 });
 
-
 describe('Mars Image', () => {
   test('Image of Mars must be showing from the API', () => {
     render(<Image />);

@@ -7,10 +7,12 @@ import { deleteTask } from '../features/taskSlice';
 function Task({ title, description, creator, worker, done, id}) {
     const dispatch = useDispatch();
 
+    // Passes the id to the setCheck function within dispatch
     const handleCheck = () => {
         dispatch(setCheck(id));
     }
 
+    // Passes the id to the deleteTask function within dispatch
     const handleDelete = () => {
         dispatch(deleteTask(id));
     }
