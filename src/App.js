@@ -9,7 +9,7 @@ function App() {
       {/* Header */}
       {/* Image */}
       {/* Sidebar */}
-      {/* todolist */}
+      {/* tasklist */}
       <Input />
     </div>
   );

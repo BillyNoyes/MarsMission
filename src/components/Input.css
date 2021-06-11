@@ -13,6 +13,7 @@ input {
     border: none;
     margin-left: 12px;
     flex: 1;
+    border-right: 1px solid grey;
 }
 
 input:focus {
