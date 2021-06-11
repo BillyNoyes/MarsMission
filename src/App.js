@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
 import Input from './components/Input';
 import Task from './components/Task';
 import Sidebar from './components/Sidebar';
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className="app">
-      {/* Header */}
+      <Header />
       <div className="app__main">
         <Sidebar taskList={taskList} />
         <div className='app__mainContent'>
@@ -23,6 +24,7 @@ function App() {
           <Input />
         </div>
       </div>
+      
       
     </div>
   );

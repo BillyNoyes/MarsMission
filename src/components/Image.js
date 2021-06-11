@@ -5,9 +5,7 @@ function Image() {
 
     useEffect(() => {
         fetch('https://source.unsplash.com/random/800x600/?mars')
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .then(data => setImage(data.message))
+        .then(response => setImage(response.url))
         .catch(err => {
 			console.log('Error happened during fetching', err);
 		});
@@ -15,7 +13,8 @@ function Image() {
 
     return (
         <>
-            {image && <img src={image} alt='Mars' />}
+            {image && <img src={image} width='50%' alt='Mars' />}
+            {/* <img src='https://source.unsplash.com/random/800x600/?mars' alt='' /> */}
         </>
     )
 }
