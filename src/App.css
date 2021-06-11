@@ -7,18 +7,59 @@
 }
 
 .app__main {
-    height: 100%;
+    height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.app__mainContent {
+.app__mainLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 20vw;
+    padding-left: 30px;
+}
+
+.app__mainRight:first-child {
+    margin-bottom: 10px;
+}
+
+.app__mainRight {
+    height: 100%;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+}
+
+.app__mainRightTaskList {
+    height: 70;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+    /* display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end; */
+}
+
+@media (max-width: 750px) {
+    .app__main {
+        flex-direction: column;
+    }
+    .app__main{
+       margin-top: 10%;
+    }
+    .app__mainRight {
+        width: 50%;
+    }
+    .app__mainRightTaskList {
+        height: 50vh;
+        overflow-y: auto;
+    }
 }

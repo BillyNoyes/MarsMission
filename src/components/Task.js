@@ -15,6 +15,9 @@ function Task({ title, description, creator, worker, done, id}) {
         dispatch(deleteTask(id));
     }
 
+    const handleEdit = () => {
+    }
+
     return (
         <div className="task">
             <p className={done && 'task--done'}>{title}</p>
@@ -25,7 +28,8 @@ function Task({ title, description, creator, worker, done, id}) {
             <button className="task__delete" onClick={() => {
                 if (window.confirm("Delete this task?")) {
                     handleDelete();
-                }}} className='task__delete'>🗑</button>
+                }}}>🗑</button>
+                <button className="task__edit" onClick={handleEdit}>📝</button>
         </div>
     )
 }

@@ -15,17 +15,19 @@ function App() {
     <div className="app">
       <Header />
       <div className="app__main">
-        <Sidebar taskList={taskList} />
-        <div className='app__mainContent'>
+        <div className='app__mainLeft'>
           <Image />
-          {taskList.map(item => (
-            <Task key={item.id} title={item.title} description={item.description} creator={item.creator} worker={item.worker} done={item.done} id={item.id} />
-          ))}
+          <Sidebar taskList={taskList} />
+        </div>
+        <div className='app__mainRight'>
+          <div className='app__mainRightTaskList'>
+            {taskList.map(item => (
+              <Task key={item.id} title={item.title} description={item.description} creator={item.creator} worker={item.worker} done={item.done} id={item.id} />
+            ))}
+          </div>
           <Input />
         </div>
-      </div>
-      
-      
+      </div>   
     </div>
   );
 }

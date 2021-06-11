@@ -21,7 +21,7 @@ function Input() {
                 done: false,
                 id: Date.now()
             }))
-    
+            setError('');
             setTaskTitle('');
             setDescription('');
             setTaskCreator('');

@@ -14,14 +14,12 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 80%;
 }
 
 input {
     background: none;
     border: none;
-    margin-left: 12px;
-    flex: 1;
+    margin-left: 10px;
 }
 
 input:not(:nth-of-type(4n)) {
@@ -41,4 +39,22 @@ input:focus {
     height: 30px;
     width: 50px;
     cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .input {
+        height: 150px;
+    }
+    .input__form {
+        flex-direction: column;
+    }
+    input:not(:nth-of-type(4n)) {
+        border-right: none;
+    }
+    .input__form > * {
+        padding-top: 10px;
+    }
+    .input__form > input:nth-of-type(4n) {
+        margin-bottom: 10px;
+    }
 }

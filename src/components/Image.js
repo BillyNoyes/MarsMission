@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 function Image() {
     let [image, setImage] = useState(null)
@@ -13,7 +13,7 @@ function Image() {
 
     return (
         <>
-            {image && <img src={image} width='50%' alt='Mars' />}
+            {image && <img src={image} style={{marginBottom: '20px'}} width='80%' alt='Mars' />}
             {/* <img src='https://source.unsplash.com/random/800x600/?mars' alt='' /> */}
         </>
     )
