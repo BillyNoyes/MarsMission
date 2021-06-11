@@ -20,10 +20,15 @@ const taskSlice = createSlice({
         },
         deleteTask: (state, action) => {
             state.taskList.filter(item => item.id !== action.id);
+        },
+        deleteAll: (state, action) => {
+            while (state.taskList.length) {
+                state.taskList.pop();
+            }
         }
     }
 });
 
-export const { saveTask, setCheck, deleteTask } = taskSlice.actions
+export const { saveTask, setCheck, deleteTask, deleteAll } = taskSlice.actions
 export const selectTaskList = state => state.tasks.taskList
 export default taskSlice.reducer
