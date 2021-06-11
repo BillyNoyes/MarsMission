@@ -1,17 +1,16 @@
 .app {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(168, 173, 182);
+    background-color: #212121;
     display: flex;
     flex-direction: column;
 }
 
 .app__main {
+    padding-top: 10vh;
     height: 90vh;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .app__mainLeft {
@@ -19,8 +18,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 20vw;
+    flex: 0.25;
+    max-width: 15%;
     padding-left: 30px;
 }
 
@@ -29,8 +28,8 @@
 }
 
 .app__mainRight {
-    height: 100%;
-    width: 70vw;
+    height: 90vh;
+    flex: 0.75;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,17 +37,12 @@
 }
 
 .app__mainRightTaskList {
-    height: 70;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     overflow-y: auto;
-    /* display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end; */
+    flex: 1;
+    height: 500px;
 }
 
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
     .app__main {
         flex-direction: column;
     }
@@ -62,4 +56,4 @@
         height: 50vh;
         overflow-y: auto;
     }
-}
+} */
