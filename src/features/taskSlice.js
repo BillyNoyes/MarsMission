@@ -21,6 +21,15 @@ const taskSlice = createSlice({
                 }
             })
         },
+        updateTask: (state, action) => {
+            state.taskList.map(item => {
+                if (action.payload.id === item.id) {
+                    item.title = action.payload.title;
+                    item.description = action.payload.description;
+                    item.worker = action.payload.worker;
+                }
+            })
+        },
         // Checks the array to find indexof the id passed in
         deleteTask: (state, action) => {
             const index = state.taskList.indexOf(action.payload);
@@ -36,6 +45,6 @@ const taskSlice = createSlice({
     }
 });
 
-export const { saveTask, setCheck, deleteTask, deleteAll } = taskSlice.actions
+export const { saveTask, setCheck, updateTask, deleteTask, deleteAll } = taskSlice.actions
 export const selectTaskList = state => state.tasks.taskList
 export default taskSlice.reducer
