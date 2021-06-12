@@ -22,7 +22,7 @@ input {
     margin-left: 10px;
 }
 
-input:not(:nth-of-type(4n)) {
+input:not(:nth-of-type(3n)) {
     border-right: 1px solid grey;
 }
 
